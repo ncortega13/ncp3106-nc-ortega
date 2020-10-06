@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+	<style>
+.btn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #0d98ba;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  width: 300px;
+  border-radius: 10px;
+  height: 50px;
+}
+body {
+    font-family: 'Rubik';
+    background-image: url('skyblue.png');
+	}
+  label{
+    font-size: 15px;
+  }
+input {
+    font-family: 'Rubik';
+    font-size: 15px;
+    height: 30px;
+    padding: 0 20px;
+    background-color: #f5f5f5;
+    border: none;
+    border-bottom: 3px solid #0d98ba;
+}
+select {
+    height: 30px;
+    padding: 0 20px;
+    margin-right: 319px;
+    background-color: #f5f5f5;
+    border: none;
+    border-bottom: 3px solid #0d98ba;
+}
+.myselect {
+    height: 30px;
+    padding: 0 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+.myselectuli {
+    height: 30px;
+    padding: 0 20px;
+    border-radius: 5px;
+}
+.myselectgrr {
+    height: 30px;
+    padding: 0 20px;
+    margin-left: 45px;
+    border-radius: 5px;
+}
+#myDIV {
+    width: 1075px;
+    height: 900px;
+    padding: 50px;
+    background-color: #f6f6f6;
+    color: #000000;
+    box-shadow : 4px 10px 10px;
+  }
+h1{
+  font-size: 55px;
+  margin-top: 20px;
+}
+h4{
+  text-align: right;
+  color: #0d98ba;
+  margin-right: 20px;
+}
+	</style>
+</head>
+
+<body>
+
+	<form action="action_page.php" method="POST">
+      <div id="myDIV">
+        <h1>ACCOUNT REGISTRATION</h1>
+        <br>
+      <form action="action_page.php" method="POST">
+      <br>
+			<label for="Last Name">Last Name </label>
+      <label for="Username" style="margin-left: 550px">Username</label><br>
+			<input type="text" name="lname" required style="width: 400px">
+      <input type="text" name="username" required style="width: 400px; margin-left: 184px"><br><br><br>
+			<label for="First Name">First Name</label>
+      <label for="Middle Initial" style="margin-left: 300px">M.I</label>
+      <label for="Password" style="margin-left: 225px">Password</label><br>
+			<input type="text" name="fname" required style="width: 300px">
+      <input type="text" name="mname" style="margin-left: 30px; width: 26px;">
+      <input type="Password" name="pw" required style="width: 400px; margin-left: 184px"><br><br><br>
+      <label for="Student Number" style="margin-right: 60px";>Student Number</label>
+      <label for="Confirm Password" style="margin-left: 448px">Confirm Password</label><br>
+      <input type="number" name="snumber" required style="width: 400px">
+      <input type="Password" name="repw" required style="width: 400px; margin-left: 184px"><br><br><br>
+      <label for="Year Level">Year Level</label>
+      <label for="birthday" style="margin-left: 100px";>Birthday</label><br>
+      <select name="years" style="margin-right: 50px; width: 125px" required>
+        <option value=" - ">  </option>
+        <option value="1st Year">1</option>
+        <option value="2nd Year">2</option>
+        <option value="3rd Year">3</option>
+        <option value="4th Year">4</option>
+      <input type="date" name="bday" required style="width: 225px";>
+      <input type="checkbox" name="terms" required style="width: 400px; margin-left: -5px">
+      <label for="agree" style="margin-left: -170px";>I agree to the Terms & Conditions</label>
+      <br><br><br>
+      <label for="Mobile Number" style="margin-right: 32px";>Mobile Number</label><br>
+      <input type="number" name="mobilenumber" required style="width: 400px"><br><br><br>
+      <label for="uemail" style="margin-right: 82px";>UE Email Address</label><br>
+      <input type="text" name="uemail" required style="width: 400px"><br><br><br>
+			<br><button class="btn" type="Submit" name="Submit" style="margin-left: 675px">Sign In</button>
+      <br><br><br>
+      <br><br>
+
+        </div>
+	</form>
+
+</body>
+</html>
