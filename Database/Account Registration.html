@@ -7,7 +7,7 @@
 .btn {
   font-size: 20px;
   cursor: pointer;
-  background-color: #0d98ba;
+  background-color: #A9A9A9;
   color: #ffffff;
   padding: 10px 15px;
   border: none;
@@ -17,63 +17,44 @@
 }
 body {
     font-family: 'Rubik';
-    background-image: url('wallpaper/skyblue.png');
+    background-image: url('wallpaper/skyline.jpg');
 	}
   label{
     font-size: 15px;
   }
 input {
     font-family: 'Rubik';
-    font-size: 15px;
+    font-size: 25px;
     height: 30px;
     padding: 0 20px;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     border: none;
-    border-bottom: 3px solid #0d98ba;
+    border-bottom: 3px solid #A9A9A9;
 }
 select {
     height: 30px;
     padding: 0 20px;
-    margin-right: 319px;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     border: none;
-    border-bottom: 3px solid #0d98ba;
-}
-.myselect {
-    height: 30px;
-    padding: 0 20px;
-    margin-left: 20px;
-    border-radius: 5px;
-}
-.myselectuli {
-    height: 30px;
-    padding: 0 20px;
-    border-radius: 5px;
-}
-.myselectgrr {
-    height: 30px;
-    padding: 0 20px;
-    margin-left: 45px;
-    border-radius: 5px;
+    font-size: 25px;
+    border-bottom: 3px solid #A9A9A9;
 }
 #myDIV {
     width: 1075px;
-    height: 900px;
+    height: 853px;
     padding: 50px;
-    background-color: #f6f6f6;
+    background-color: #ffffff;
     color: #000000;
-    box-shadow : 4px 10px 10px;
+    box-shadow : 1px 10px 10px;
   }
 h1{
   font-size: 55px;
   margin-top: 20px;
 }
-h4{
-  text-align: right;
-  color: #0d98ba;
-  margin-right: 20px;
+.check{
+background-color: #A9A9A9;
 }
-	</style>
+</style>
 </head>
 
 <body>
@@ -81,7 +62,7 @@ h4{
 	<form action="action_page.php" method="POST">
       <div id="myDIV">
         <h1>ACCOUNT REGISTRATION</h1>
-        <br>
+        <br><br>
       <form action="action_page.php" method="POST">
       <br>
 			<label for="Last Name">Last Name </label>
@@ -107,11 +88,11 @@ h4{
         <option value="3rd Year">3</option>
         <option value="4th Year">4</option>
       <input type="date" name="bday" required style="width: 225px";>
-      <input type="checkbox" name="terms" required style="width: 400px; margin-left: -5px">
+      <input class="check" type="checkbox" name="terms" required style="width: 400px; margin-left: -5px; color: #F5F5F5">
       <label for="agree" style="margin-left: -170px";>I agree to the Terms & Conditions</label>
-      <br><br><br>
-      <label for="Mobile Number" style="margin-right: 32px";>Mobile Number</label><br>
-      <input type="number" name="mobilenumber" required style="width: 400px"><br><br><br>
+      <br><br><br><label for="Mobile Number">Mobile Number</label><br>
+      <label style="font-size: 25px">+63 </label>
+      <input type="number" name="mobilenumber" required style="width: 338px; margin-left: 10px"><br><br><br>
       <label for="uemail" style="margin-right: 82px";>UE Email Address</label><br>
       <input type="text" name="uemail" required style="width: 400px"><br><br><br>
 			<br><button class="btn" type="Submit" name="Submit" style="margin-left: 675px">Sign In</button>
