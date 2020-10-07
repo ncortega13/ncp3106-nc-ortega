@@ -74,6 +74,81 @@ h4{
   color: #0d98ba;
   margin-right: 20px;
 }
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.form-control input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control i {
+	visibility: hidden;
+	position: absolute;
+	top: 40px;
+	right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+.form button {
+	background-color: #8e44ad;
+	border: 2px solid #8e44ad;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
+}
 	</style>
 </head>
 
@@ -85,17 +160,37 @@ h4{
         <br>
       <form action="action_page.php" method="POST">
       <br>
-			<label for="Last Name">Last Name </label>
+		<label for="Last Name">Last Name </label>
+				<input type="text" placeholder="last name" id="lname" name="lname" />
+				<i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+				
       <label for="Username" style="margin-left: 550px">Username</label><br>
-			<input type="text" name="lname" required style="width: 400px">
       <input type="text" name="username" required style="width: 400px; margin-left: 184px"><br><br><br>
+	  
 			<label for="First Name">First Name</label>
+				<i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+				
       <label for="Middle Initial" style="margin-left: 300px">M.I</label>
+	            <input type="text" maxlength="2" placeholder="middle initial" id="MI" name="MI" />
+				<i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+	  
       <label for="Password" style="margin-left: 225px">Password</label><br>
 			<input type="text" name="fname" required style="width: 300px">
       <input type="text" name="mname" style="margin-left: 30px; width: 26px;">
       <input type="Password" name="pw" required style="width: 400px; margin-left: 184px"><br><br><br>
-      <label for="Student Number" style="margin-right: 60px";>Student Number</label>
+      
+	  <label for="Student Number" style="margin-right: 60px";>Student Number</label>
+	             <input type="text" maxlength="11" placeholder="Student Number" id="studnum" name="studnum" />
+				<i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+				
       <label for="Confirm Password" style="margin-left: 448px">Confirm Password</label><br>
       <input type="number" name="snumber" required style="width: 400px">
       <input type="Password" name="repw" required style="width: 400px; margin-left: 184px"><br><br><br>
@@ -115,7 +210,7 @@ h4{
       <input type="number" name="mobilenumber" required style="width: 400px"><br><br><br>
       <label for="uemail" style="margin-right: 82px";>UE Email Address</label><br>
       <input type="text" name="uemail" required style="width: 400px"><br><br><br>
-			<br><button class="btn" type="Submit" name="Submit" style="margin-left: 675px">Sign In</button>
+			<br><button onclick="return myFunction()" class="btn" type="Submit" name="Submit" style="margin-left: 675px">Sign In</button>
       <br><br><br>
       <br><br>
 
