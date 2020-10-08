@@ -1,0 +1,130 @@
+  input[type="checkbox"]:focus + label::before {
+    outline: rgb(59, 153, 252) auto 5px;
+}
+
+body {
+    font-family: 'Rubik';
+    background-image: url('wallpaper/skyline.jpg');
+	}
+	
+select {
+	height: 30px;
+    padding: 0 20px;
+    background-color: #ffffff;
+    border: none;
+    font-size: 20px;
+    border-bottom: 3px solid #A9A9A9;
+}
+
+#myDIV {
+    width: 1075px;
+    height: 1000px;
+    padding: 50px;
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow : 1px 10px 10px;
+  }
+h1{
+  font-size: 55px;
+  margin-top: 20px;
+}
+.check{
+background-color: #A9A9A9;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+p{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+
+.form {
+	padding: 30px 40px;	
+}
+
+.form-control {
+	margin-bottom: 5px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+
+.form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+	font-size: 15px;
+}
+
+.form-control input {
+    font-family: 'Rubik';
+    font-size: 25px;
+    height: 30px;
+    padding: 0 20px;
+    background-color: #ffffff;
+    border: none;
+    border-bottom: 3px solid #A9A9A9;
+}
+
+
+
+.form-control input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control i {
+	visibility: hidden;
+	position: absolute;
+	top: 10px;
+	right: 0px;
+}
+
+.form-control.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: relative;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+.form button {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #A9A9A9;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  width: 300px;
+  border-radius: 10px;
+  height: 50px;
+}

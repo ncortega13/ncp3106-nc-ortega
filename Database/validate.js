@@ -11,16 +11,21 @@ function myFunction()
 	var MIValue = document.getElementById("MI").value;
 	var studnumValue = document.getElementById("studnum").value;
 	var mobnumValue = document.getElementById("mobnum").value;
-	var bday = document.getElementById("bday").value;
-	  
+	var bdayValue = document.getElementById("bday").value;
+	var emailValue = document.getElementById("email").value;	 
+	var userValue = document.getElementById("user").value;	 
+	var passValue = document.getElementById("pass").value;
+	var conpassValue = document.getElementById("conpass").value;
+	var cbValue = document.getElementById("cb").value;
+
+	
 	var letters = /^[A-Za-z]+$/;
 	var numbers = /^[0-9]+$/;
-	var now = new Date();
-	var birthdate = bday.split("/");
-    var born = new Date(bday[2], bday[0], bday[1] * 1 - 1);
-    var age = Math.floor((now.getTime() - born.getTime()) / (365.25 * 24 * 60 * 60 * 1000));
-   
-      
+	var bod = bdayValue.replace(/-/gi,"");;  
+    var alphanum = /^([a-zA-Z@.]+)$/;  
+	var uname = /^([a-zA-Z-_]+)$/;
+	var pass1 = /^([a-zA-Z0-9]+)$/;	
+	
     if (lnameValue != "") 
 	  {
 			if (lname.value.match(letters)){
@@ -85,26 +90,89 @@ function myFunction()
 	else {
 			setErrorFor(mobnum, 'Mobile Number cannot be blank');
 		}
-	  return false;
-      }
 	  
 	if (bdayValue != "") 
 	  {
-	  if (age>18){
+	  if (bod < "2002107"){
 		  setSuccessFor(bday);	
-        setErrorFor(bday,'You need to be 18 years of age and older');
+		}
+			else{
+			setErrorFor(bday,'You need to be 18 years of age and older');
+			}
 	}
-	else{
+	  
+	else {
+			setErrorFor(bday, 'Birthday cannot be blank');
+		}
 		
-return true;
-}
+	if (emailValue != "") 
+	  {
+	  if(emailValue.match(alphanum)){
+		  if (/@ue.edu.ph\s*$/.test(emailValue)){
+				setSuccessFor(email);
+		}
+		else{
+			setErrorFor(email, 'Incorrect Email Domain');
+		}
+	  }
+		else{
+		setErrorFor(email,'Incorrect Email Format');
+			}
+		}
+	  
+	else {
+			setErrorFor(email, 'Email cannot be blank');
+		}
+		
+    if (userValue != "") 
+	  {
+	  if(user.value.match(uname)){
+			setSuccessFor(user);			
+		}
+			else{
+			setErrorFor(user, 'Incorrect Format');	
+	  }
 	  }
 	else {
-			setErrorFor(mobnum, 'Mobile Number cannot be blank');
+			setErrorFor(user, 'Username cannot be blank');
 		}
-	  return false;
-      }
+	
+    if (passValue != "") 
+	  {
+	  if(pass.value.match(pass1)){
+			setSuccessFor(pass);			
+		}
+			else{
+			setErrorFor(pass, 'Incorrect Format');	
+	  }
+	  }
+	else {
+			setErrorFor(pass, 'Password cannot be blank');
+		}	
+
+    if (conpassValue != "") 
+	  {
+	  if(pass.value.match(pass1)){
+			setSuccessFor(conpass);			
+		}
+			else{
+			setErrorFor(conpass, 'Incorrect Format');	
+	  }
+	  }
+	else {
+			setErrorFor(conpass, 'Password cannot be blank');
+		}
+
+	if (document.getElementById('cb').checked == true){
+		setSuccessFor(cb);
+	}
+	else{
+		setErrorFor(cb, 'Accept the Terms & Condition');
+	}
 	  
+	 return false;
+     }
+
 	
 	  
 function setErrorFor(input, message) {

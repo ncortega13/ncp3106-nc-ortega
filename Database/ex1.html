@@ -11,6 +11,7 @@
 	position: relative;
 }
 
+
 .form-control label {
 	display: inline-block;
 	margin-bottom: 5px;
@@ -132,6 +133,47 @@
                 <i class="fas fa-exclamation-circle"></i>
 				<small>Error message</small>
 			</div>
+		<br>
+			<div class="form-control">
+				<label for="email">Email Address</label>
+                <input type="email" placeholder="Email Address"  id="email" name="email" />
+				<i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+			</div>
+		<br>
+			<div class="form-control">
+				<label for="user">Username</label>
+                <input type="text" placeholder="Username"  id="user" name="user" maxlength="15"/>
+				<i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+			</div>
+		<br>
+			<div class="form-control">
+				<label for="pass">Password</label>
+                <input type="password" placeholder="Password" id="pass" name="pass" maxlength="20"/>
+				<i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+			</div>			
+		<br>
+			<div class="form-control">
+				<label for="pass">Confirm Password</label>
+                <input type="password" placeholder="Confirm Password" id="conpass" name="conpass" maxlength="20"/>
+				<i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+			</div>		
+		<br>
+			<div class="form-control">
+				<input type="checkbox" id="cb" name="cb">
+				<label for="checkbox"> Terms and Conditions</label>
+				<i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+			</div>
+		</br>
 		
             <button onclick="return myFunction()" id="register" name="register">Submit</button>
             
