@@ -7,18 +7,10 @@ body {
     background-image: url('wallpaper/skyline.jpg');
 	}
 	
-select {
-	height: 30px;
-    padding: 0 20px;
-    background-color: #ffffff;
-    border: none;
-    font-size: 20px;
-    border-bottom: 3px solid #A9A9A9;
-}
 
 #myDIV {
     width: 1075px;
-    height: 1000px;
+    height: 853px;
     padding: 50px;
     background-color: #ffffff;
     color: #000000;
@@ -45,14 +37,7 @@ p{
   text-justify: inter-word;
 }
 
-
-.form {
-	padding: 30px 40px;	
-}
-
 .form-control {
-	margin-bottom: 5px;
-	padding-bottom: 20px;
 	position: relative;
 }
 
@@ -62,7 +47,6 @@ p{
 	margin-bottom: 5px;
 	font-size: 15px;
 }
-
 .form-control input {
     font-family: 'Rubik';
     font-size: 25px;
@@ -71,9 +55,8 @@ p{
     background-color: #ffffff;
     border: none;
     border-bottom: 3px solid #A9A9A9;
+	
 }
-
-
 
 .form-control input:focus {
 	outline: 0;
@@ -85,6 +68,29 @@ p{
 }
 
 .form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control select {
+	height: 30px;
+    padding: 0 20px;
+    background-color: #ffffff;
+    border: none;
+    font-size: 25px;
+    border-bottom: 3px solid #A9A9A9;
+	font-family: 'Rubik';
+}
+
+.form-control select:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-control.success select {
+	border-color: #2ecc71;
+}
+
+.form-control.error select {
 	border-color: #e74c3c;
 }
 

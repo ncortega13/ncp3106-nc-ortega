@@ -1,0 +1,149 @@
+body {
+  background-image:url("img/bg3.jpg");
+  	 background-repeat:  repeat-2;
+ 	 background-size: 1500px 2500px;
+  font-family:Candara;
+}
+
+h1 {
+  margin-left: 50px;
+  color: #7d7d7d;
+}
+
+.text{
+	font-size: 20px;
+	line-height: 1.5;
+	text-align: justify;
+  	text-justify: inter-word;
+	color: #7d7d7d;
+}
+
+.text1{
+	font-size: 30px;
+	line-height: 1.0;
+	text-align: justify;
+  	text-justify: inter-word;
+	color: #FFB6C1;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px gray;
+}
+
+
+.quotation{
+	font-size: 30px;
+	font-style: italic;
+	line-height: 1.5;
+	text-align: center;
+  	text-justify: inter-word;
+	color: #7d7d7d;
+}
+
+.text_container{
+	margin-top: 20px;
+  	margin-bottom: 30px;
+  	margin-right: 30px;
+  	margin-left: 30px;
+}
+
+.logos{
+	width: 40px;
+	height: 40px;
+	padding-right: 7px;
+	padding-left: 7px;
+}
+
+.logos1 img:hover{
+	transform: scale(1.15);
+
+}
+
+
+.contents{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 998px;
+	height: auto;
+	color: #FFB6C1;
+	border: 1px solid gray;
+}
+
+.contents img:hover{
+	transform: scale(1.10);
+	border-radius: 20px;
+}
+
+
+.navbar{
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 1000px;
+	height: 55px;
+	background-color: #FFB6C1;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+
+.navbar p{
+	color: white;
+	font-size: 25px;
+	float: left;
+	padding-left: 25px;
+
+}
+
+.logoss{
+	width: 60px;
+	height: 60px;
+	margin-left: 20px;
+}
+
+.title{
+	margin-top: 20px;
+	font-size: 30px;
+	line-height: 1.0;
+	text-align: justify;
+  	text-justify: inter-word;
+	color: #f6f6f6;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px gray;
+}
+
+.navbarr{
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 1202px;
+	height: 60px;
+	background-color: #fed9ca;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	margin-bottom: 0px;
+}
+
+.navbarr p{
+	color: white;
+	font-size: 20px;
+	float: left;
+	padding-left: 25px;
+	text-align: center;
+	margin-left: auto;
+}
+
+.contents2{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 1200px;
+	height: auto;
+	color: #FFB6C1;
+	border: 1px solid gray;
+}
+
+.contents2 img:hover{
+	transform: scale(1.10);
+	border-radius: 20px;
+}
+
+
