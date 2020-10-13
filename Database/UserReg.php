@@ -1,5 +1,4 @@
 <?php
-
 $lastname = $_POST['lname'];
 $firstname = $_POST['fname'];
 $middlename = $_POST['MI'];
@@ -12,11 +11,35 @@ $emailAdd = $_POST['email'];
 $passwordOrig = $_POST['pass'];
 $passwordRepeat = $_POST['conpass'];
 
-
-if ($passwordOrig == $passwordRepeat ) {
+if ($passwordOrig == $passwordRepeat) {
 	
-		insertRecord($lastname,$firstname,$middlename,$studentnum,$yearlev,$mobilenum,$birth,$username,$emailAdd,$passwordOrig);   
-	}
+ require 'openDB.php';
+
+	$db = mysqli_connect("localhost","root","","registrants");
+
+		$sql_u = "SELECT username FROM user WHERE username = '$username'";
+		$res_u = mysqli_query($db, $sql_u) or die (mysqli_error($db));
+
+		if (mysqli_num_rows($res_u) > 0) {
+			echo '<script>
+  				alert("The username has been taken. Try another one.");
+					</script>';
+				echo '<script>
+				window.history.go(-1);
+					</script>';
+				}
+		else{
+			$sql = "INSERT INTO user (last_name, first_name, middle_initial, student_number, year_level, mobile_number, birth_date, ue_email, username, password) VALUES (?,?,?,?,?,?,?,?,?,?)";
+			$conn->prepare($sql)->execute([$lastname,$firstname,$middlename,$studentnum,$yearlev,$mobilenum,$birth,$emailAdd,$username,$passwordOrig]);
+    		echo '<script>
+            	alert("Congratulations, you are now registered!");
+                	</script>';
+                echo '<script>
+				window.history.go(-1);
+					</script>';
+			exit();
+		}
+}
 	else {
 		echo '<script>
   				alert("Passwrod Mismatch!");
@@ -26,32 +49,4 @@ if ($passwordOrig == $passwordRepeat ) {
 				window.history.go(-1);
 					</script>';
 		}
-
-
-
-
-
-
-function insertRecord($lastname,$firstname,$middlename,$studentnum,$yearlev,$mobilenum,$birth,$username,$emailAdd,$passwordOrig) {
- try {
- require 'openDB.php';
-     
-  $sql = "INSERT INTO user (last_name,first_name,middle_initial,student_number,year_level,mobile_number,birth_date,ue_email,username,password) VALUES (?,?,?,?,?,?,?,?,?,?)";
-     
-  // use exec() because no results are returned 
-     $conn->prepare($sql)->execute ([$lastname,$firstname,$middlename,$studentnum,$yearlev,$mobilenum,$birth,$username,$emailAdd,$passwordOrig]);
-
-
-  echo '<script>
-
-  				alert("Congratulations, you are now registered!");
-				  			header("Location:NCP3106-NC-ORTEGA/myBionote.html");
-					</script>';
-} catch(PDOException $e) {
-  echo $sql . "<br>" . $e->getMessage();
-}
-
-$conn = null;
-}
-
 ?>

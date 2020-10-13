@@ -182,17 +182,20 @@ function myFunction()
 	  }
 	else {
 			setErrorFor(pass, 'Password cannot be blank');
-		}	
-
-    if (conpassValue.match(passValue) 
+		}		
+		
+    if (conpassValue !=""){
+	if (conpass.value.match(pass.value)) 
 	  {
-	 
 			setSuccessFor(conpass);			
 		}
-			else{
-			setErrorFor(conpass, 'Incorrect Password');	
-	  }		
-		
+	else {
+			setErrorFor(conpass, 'Password Mismatch');
+		}
+	}
+	else{
+		setErrorFor(conpass, 'Password cannot be blank');
+	}
 
 	if (document.getElementById('cb').checked == true){
 		setSuccessFor(cb);
