@@ -8,7 +8,7 @@ function myFunction()
  { 
     var lnameValue = document.getElementById("lname").value;
 	var fnameValue = document.getElementById("fname").value;
-	var MIValue = document.getElementById("MI").value;
+	var midnameValue = document.getElementById("midname").value;
 	var studnumValue = document.getElementById("studnum").value;
 	var mobnumValue = document.getElementById("mobnum").value;
 	var bdayValue = document.getElementById("bday").value;
@@ -22,7 +22,7 @@ function myFunction()
 	
 	var letters = /^[A-Za-z ]+$/;
 	var numbers = /^[0-9]+$/;
-	var bod = bdayValue.replace(/-/gi,"");;  
+	var bod = bdayValue.replace(/-/gi,"");
     var alphanum = /^([a-zA-Z@.]+)$/;  
 	var uname = /^([a-zA-Z-_]+)$/;
 	var pass1 = /^([a-zA-Z0-9]+)$/;	
@@ -34,10 +34,12 @@ function myFunction()
 		}
 			else{
 			setErrorFor(lname, 'Alphabet Characters only');	
+			 return false;
 	  }
 	  }
 	else {
 			setErrorFor(lname, 'Last Name cannot be blank');
+			 return false;
 		}
 	
     if (fnameValue != "") 
@@ -47,23 +49,26 @@ function myFunction()
 		}
 			else{
 			setErrorFor(fname, 'Alphabet Characters only');	
+			 return false;
 	  }
 	  }
 	else {
 			setErrorFor(fname, 'First Name cannot be blank');
+			 return false;
 		}	
 		
-	if (MIValue != "") 
+	if (midnameValue != "") 
 	  {
-			if (MI.value.match(letters)){
-			setSuccessFor(MI);			
+			if (midname.value.match(letters)){
+			setSuccessFor(midname);			
 		}
 			else{
-			setErrorFor(MI, 'Alphabet Characters only');	
+			setErrorFor(midname, 'Alphabet Characters only');
+			return false;			
 	  }
 	  }
 	else {
-			setSuccessFor(MI);
+			setSuccessFor(midname);
 		}
 
     if (studnumValue != "") 
@@ -74,21 +79,25 @@ function myFunction()
 		  }
 		else{
 			  setErrorFor(studnum, 'Incorrect Student Number');
+			   return false;
 		}
 	  }
 	 else{
 		setErrorFor(studnum, 'Numerical Characters only');	
+		 return false;
 	  }
 	  }
 	  
 	else {
 			setErrorFor(studnum, 'Student Number cannot be blank');
+			 return false;
 		}
 	 
 		
 	if (yearValue == "0") 
 	  {
-			setErrorFor(year, 'Year Level cannot be blank');				
+			setErrorFor(year, 'Year Level cannot be blank');	
+ return false;			
 		}
 	else{
 			setSuccessFor(year);	
@@ -102,11 +111,13 @@ function myFunction()
 		}
 			else{
 			setErrorFor(bday,'You need to be 18 years of age and older');
+			 return false;
 			}
 	}
 	  
 	else {
 			setErrorFor(bday, 'Birthday cannot be blank');
+			 return false;
 		}
 		
 	if (mobnumValue != "") 
@@ -117,15 +128,18 @@ function myFunction()
 		  }
 		else{
 			  setErrorFor(mobnum, 'Incorrect Mobile Number');
+			   return false;
 		}
 	  }
 	 else{
 		setErrorFor(mobnum, 'Numerical Characters only');	
+		 return false;
 	  }
 	  }
 	  
 	else {
 			setErrorFor(mobnum, 'Student Number cannot be blank');
+			 return false;
 		}
 		
 	if (emailValue != "") 
@@ -136,15 +150,18 @@ function myFunction()
 		}
 		else{
 			setErrorFor(email, 'Incorrect Email Domain');
+			 return false;
 		}
 	  }
 		else{
 		setErrorFor(email,'Incorrect Email Format');
+		 return false;
 			}
 		}
 	  
 	else {
 			setErrorFor(email, 'Email cannot be blank');
+			 return false;
 		}
 		
     if (userValue != "") 
@@ -154,15 +171,18 @@ function myFunction()
 			setSuccessFor(user);			
 		}
 			else{
-			setErrorFor(user, 'Incorrect Username');	
+			setErrorFor(user, 'Incorrect Username');
+ return false;			
 	  }
 	  }
 	  else{
 	  setErrorFor(user, 'Incorrect Format');
+	   return false;
 	  }
 	  }
 	else {
 			setErrorFor(user, 'Username cannot be blank');
+			 return false;
 		}
 	
     if (passValue != "") 
@@ -174,24 +194,34 @@ function myFunction()
 		}
 			else{
 			setErrorFor(pass, 'Incorrect Password');	
+			 return false;
 	  }		
 		}
 			else{
 			setErrorFor(pass, 'Incorrect Format');	
+			 return false;
 	  }
 	  }
 	else {
 			setErrorFor(pass, 'Password cannot be blank');
+			 return false;
 		}		
 
 		
+	if (conpassValue !=""){
 	if (conpass.value.match(pass.value)) 
 	  {
 			setSuccessFor(conpass);			
 		}
 	else {
 			setErrorFor(conpass, 'Password Mismatch');
+			 return false;
 		}
+	}
+	else{
+		setErrorFor(conpass,'Confirm Password Cannot be Blank');
+		 return false;
+	}
 
 
 	if (document.getElementById('cb').checked == true){
@@ -199,9 +229,9 @@ function myFunction()
 	}
 	else{
 		setErrorFor(cb, 'Accept the Terms & Condition');
+			 return false;
 	}
 	  
-	 return false;
      }
 
 	

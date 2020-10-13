@@ -1,7 +1,7 @@
 <?php
 $lastname = $_POST['lname'];
 $firstname = $_POST['fname'];
-$middlename = $_POST['MI'];
+$middlename = $_POST['midname'];
 $studentnum = $_POST['studnum'];
 $yearlev = $_POST['year'];
 $mobilenum = $_POST['mobnum'];
