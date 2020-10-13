@@ -185,7 +185,7 @@ function myFunction()
 			 return false;
 		}
 	
-    if (passValue != "") 
+    if (passVale != "") 
 	  {
 	  if(pass.value.match(pass1))
 			{
