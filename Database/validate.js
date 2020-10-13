@@ -165,7 +165,7 @@ function myFunction()
 			setErrorFor(user, 'Username cannot be blank');
 		}
 	
-    if (passValue != "") 
+    if (passVale != "") 
 	  {
 	  if(pass.value.match(pass1))
 			{
