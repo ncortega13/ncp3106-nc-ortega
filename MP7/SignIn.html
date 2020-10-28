@@ -13,22 +13,16 @@
 		<div class="column">
 			<div id="myDIV">
 				<h1>SIGN IN</h1>
-			<form action="UserReg.php" method="POST" class="form">
+			<form action="UserSignIn.php" method="POST" class="form">
 				<br><br><br><br>
-				<div class="form-control">
+				<div>
     				<label for="Username">Username</label><br>
-    				<input type="text" id="uname" name="uname" style="width: 400px" autocomplete="off"><br>
-					<i class="fas fa-check-circle"></i>
-					<i class="fas fa-exclamation-circle"></i>
-					<small>Error message</small><br>
+    				<input type="text" id="uname" name="uname" style="width: 400px" autocomplete="off" minlength="8" maxlength="15"><br>
 				</div>
 				<br>
-				<div class="form-control">
+				<div>
     				<label for="Last Name">Password</label><br>
-    				<input type="text" id="pw" name="pw" style="width: 400px" autocomplete="off"><br>
-					<i class="fas fa-check-circle"></i>
-					<i class="fas fa-exclamation-circle"></i>
-					<small>Error message</small><br>
+    				<input type="password" id="pw" name="pw" style="width: 400px" autocomplete="off" minlength="8" maxlength="15"><br>
 				</div>
 				<br><br><br><br><br>
 				<center>

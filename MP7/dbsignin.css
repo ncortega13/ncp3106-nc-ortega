@@ -42,12 +42,12 @@ p{
 }
 
 
-.form-control label {
+label {
 	display: inline-block;
 	margin-bottom: 5px;
 	font-size: 15px;
 }
-.form-control input {
+input {
     font-family: 'Rubik';
     font-size: 25px;
     height: 30px;
