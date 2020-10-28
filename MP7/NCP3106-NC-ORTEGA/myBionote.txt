@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:#8d6262;">
+
+	<center>
+		<img src"nics.png" width="200" height="200" alt="Profile Picture">
+		<h1> Nicolle Clarisse Ortega</h1>
+	</center>
+</body>
+</html>

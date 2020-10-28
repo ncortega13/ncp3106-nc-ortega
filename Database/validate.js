@@ -78,7 +78,7 @@ function myFunction()
 			setSuccessFor(studnum);		
 		  }
 		else{
-			  setErrorFor(studnum, 'Incorrect Student Number');
+			  setErrorFor(studnum, 'Student Number should contain 11 numbers');
 			   return false;
 		}
 	  }

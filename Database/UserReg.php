@@ -10,6 +10,8 @@ $username = $_POST['user'];
 $emailAdd = $_POST['email'];
 $passwordOrig = $_POST['pass'];
 $passwordRepeat = $_POST['conpass'];
+$number = "+63";
+$phone = $number. '' .$mobilenum;
 
 if ($passwordOrig == $passwordRepeat) {
 	
@@ -30,10 +32,11 @@ if ($passwordOrig == $passwordRepeat) {
 				}
 		else{
 			$sql = "INSERT INTO user (last_name, first_name, middle_initial, student_number, year_level, mobile_number, birth_date, ue_email, username, password) VALUES (?,?,?,?,?,?,?,?,?,?)";
-			$conn->prepare($sql)->execute([$lastname,$firstname,$middlename,$studentnum,$yearlev,$mobilenum,$birth,$emailAdd,$username,$passwordOrig]);
+			$conn->prepare($sql)->execute([$lastname,$firstname,$middlename,$studentnum,$yearlev,$phone,$birth,$emailAdd,$username,$passwordOrig]);
     		echo '<script>
             	alert("Congratulations, you are now registered!");
                 	</script>';
+
                 echo '<script>
 				window.history.go(-1);
 					</script>';
